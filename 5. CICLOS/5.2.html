@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo While Suma 1 a 100</title>
+</head>
+<body>
+    <h1>2. Sumar los números del 1 al 100 usando un ciclo while.</h1>
+    <p id="resultado"></p>
+
+    <script>
+        let suma = 0;
+        let i = 1;
+        while (i <= 100) {
+            suma += i;
+            i++;
+        }
+        document.getElementById("resultado").textContent = "La suma de 1 a 100 es: " + suma;
+    </script>
+</body>
+</html>

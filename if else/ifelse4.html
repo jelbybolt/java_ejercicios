@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Pedir la calificación al usuario
+        let entrada = prompt("Introduce tu calificación del examen (0-100):");
+        
+        // Convertir a número decimal
+        let calificacion = parseFloat(entrada);
+        
+        // Validar que sea un número válido
+        if (isNaN(calificacion)) {
+            alert("Valor no válido. Introduce un número.");
+            console.log("Entrada no válida:", entrada);
+            document.write("Valor no válido. Introduce un número.");
+        } else if (calificacion < 0 || calificacion > 100) {
+            alert("La calificación debe estar entre 0 y 100.");
+            console.log("Calificación fuera de rango:", calificacion);
+            document.write("La calificación debe estar entre 0 y 100.");
+        } else {
+            // Verificar si aprobó o no
+            if (calificacion >= 60) {
+                alert("¡Felicidades! Has aprobado con " + calificacion + " puntos.");
+                console.log("Aprobado:", calificacion);
+                document.write("¡Felicidades! Has aprobado con " + calificacion + " puntos.");
+            } else {
+                alert("Lo siento, no aprobaste. Tu calificación es " + calificacion + " puntos.");
+                console.log("Reprobado:", calificacion);
+                document.write("Lo siento, no aprobaste. Tu calificación es " + calificacion + " puntos.");
+            }
+        }
+    </script>
+</body>
+</html>

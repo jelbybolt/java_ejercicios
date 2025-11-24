@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Pedir al usuario un valor
+    let entrada = prompt("Introduce un número:");
+
+    // Convertir a número y verificar que sea válido
+    let numero = Number(entrada);
+
+    if (isNaN(numero)) {
+      console.log("Entrada no válida:", entrada);
+      document.write("Entrada no válida: no es un número.");
+    } else if (numero > 0) {
+      console.log("El número es positivo:", numero);
+      document.write("El número " + numero + " es positivo.");
+    } else if (numero === 0) {
+      console.log("El número es cero:", numero);
+      document.write("El número es cero.");
+    } else {
+      console.log("El número es negativo:", numero);
+      document.write("El número " + numero + " es negativo.");
+    }
+    </script>
+</body>
+</html>

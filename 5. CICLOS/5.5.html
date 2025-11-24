@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedir Números Do While</title>
+</head>
+<body>
+    <h1>5. Pedir números hasta ingresar un número negativo, usando do while.</h1>
+    <button onclick="iniciarPrograma()">Iniciar Programa</button>
+    <pre id="resultado">Presiona "Iniciar Programa" para usar la ventana de diálogo (prompt).</pre>
+
+    <script>
+        function iniciarPrograma() {
+            const resultadoDiv = document.getElementById("resultado");
+            let historial = 'Números ingresados (termina con negativo):\n';
+            let numero;
+            
+            do {
+                // Usamos prompt simple como se solicitó para interactuar
+                const input = window.prompt("Ingresa un número. Ingresa un número negativo para terminar.");
+                
+                if (input === null) {
+                    // Cancelado
+                    numero = -1;
+                    historial += "Programa cancelado por el usuario.\n";
+                } else if (input.trim() === "") {
+                    // Entrada vacía
+                    numero = 0; 
+                } else {
+                    numero = parseFloat(input);
+                    if (!isNaN(numero)) {
+                        historial += `> ${numero}\n`;
+                    } else {
+                        // Entrada no numérica, permite al usuario reintentar
+                        numero = 0;
+                    }
+                }
+            } while (numero >= 0);
+
+            historial += "Ciclo terminado.";
+            resultadoDiv.textContent = historial;
+        }
+    </script>
+</body>
+</html>

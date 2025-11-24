@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         // Pedir el primer número al usuario
+        let entrada1 = prompt("Introduce el primer número:");
+        
+        // Pedir el segundo número al usuario
+        let entrada2 = prompt("Introduce el segundo número:");
+        
+        // Convertir a números decimales
+        let num1 = parseFloat(entrada1);
+        let num2 = parseFloat(entrada2);
+        
+        // Validar que ambos sean números válidos
+        if (isNaN(num1) || isNaN(num2)) {
+            alert("Uno o ambos valores no son números válidos.");
+            console.log("Entrada no válida");
+            document.write("Uno o ambos valores no son números válidos.");
+        } else {
+            // Usar operador ternario para determinar cuál es mayor
+            let mayor = num1 > num2 ? num1 : num2;
+            let mensaje = num1 > num2 ? "El número " + num1 + " es mayor que " + num2 : 
+                          num2 > num1 ? "El número " + num2 + " es mayor que " + num1 : 
+                          "Los números son iguales";
+            
+            alert(mensaje);
+            console.log("Mayor:", mayor);
+            document.write(mensaje);
+        }
+    </script>
+</body>
+</html>

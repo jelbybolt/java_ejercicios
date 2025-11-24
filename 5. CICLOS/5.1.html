@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo For 1 al 10</title>
+</head>
+<body>
+    <h1>1. Mostrar números del 1 al 10 usando un ciclo for.</h1>
+    <p>Resultado:</p>
+    <pre id="resultado"></pre>
+
+    <script>
+        let output = "";
+        for (let i = 1; i <= 10; i++) {
+            output += i + " ";
+        }
+        document.getElementById("resultado").textContent = output;
+    </script>
+</body>
+</html>

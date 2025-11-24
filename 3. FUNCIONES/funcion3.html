@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular el área de un circulo</title>
+</head>
+<body>
+    <script>
+        // Función que calcula el área de un círculo
+        function areaCirculo(radio) {
+            return Math.PI * radio * radio;
+        }
+
+        // Llamar la función con un radio de 5
+        let resultado = areaCirculo(5);
+        
+        // Mostrar el resultado en la consola
+        console.log("El área del círculo es: " + resultado);
+        
+        document.write("Para un radio de 5, el área del círculo es: " + resultado.toFixed(2));
+
+
+    </script>
+</body>
+</html>

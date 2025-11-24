@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Objetos Producto > 100</title>
+</head>
+<body>
+    <h1>3. Array de productos: muestra los productos cuyo precio es mayor a 100.</h1>
+    <p>Productos con precio mayor a 100:</p>
+    <pre id="resultado"></pre>
+
+    <script>
+        const productos = [
+            { nombre: "Teclado", precio: 80 },
+            { nombre: "Monitor", precio: 250 },
+            { nombre: "Mouse", precio: 45 },
+            { nombre: "Webcam", precio: 120 }
+        ];
+
+        let output = "Lista de todos los productos:\n";
+        for (let i = 0; i < productos.length; i++) {
+            output += `- ${productos[i].nombre}: $${productos[i].precio}\n`;
+        }
+        output += "\nProductos filtrados (Precio > 100):\n";
+
+        for (let i = 0; i < productos.length; i++) {
+            if (productos[i].precio > 100) {
+                output += `* ${productos[i].nombre} ($${productos[i].precio})\n`;
+            }
+        }
+        document.getElementById("resultado").textContent = output;
+    </script>
+</body>
+</html>

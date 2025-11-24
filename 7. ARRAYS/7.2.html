@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Segunda Ciudad</title>
+</head>
+<body>
+    <h1>2. Array con 5 ciudades: muestra el nombre de la segunda ciudad.</h1>
+    <p id="resultado"></p>
+
+    <script>
+        const ciudades = ["Roma", "París", "Londres", "Tokio", "Sídney"];
+        const segundaCiudad = ciudades[1];
+        
+        document.getElementById("resultado").textContent = `Array: [${ciudades.join(", ")}]. La segunda ciudad es: ${segundaCiudad}.`;
+    </script>
+</body>
+</html>

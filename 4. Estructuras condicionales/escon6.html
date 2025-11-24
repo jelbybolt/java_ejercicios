@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   // Pedir un número al usuario
+        let numero = prompt("Introduce un número:");
+        
+        // Convertir a número
+        numero = parseInt(numero);
+        
+        // Verificar si es divisible por 3 y/o 5
+        let divisiblePor3 = numero % 3 === 0;
+        let divisiblePor5 = numero % 5 === 0;
+        
+        // Usar switch con true para determinar el caso
+        switch(true) {
+            case divisiblePor3 && divisiblePor5:
+                alert("El número " + numero + " es divisible por 3 y por 5");
+                console.log("Divisible por 3 y 5");
+                document.write("El número " + numero + " es divisible por 3 y por 5");
+                break;
+            case divisiblePor3:
+                alert("El número " + numero + " es divisible por 3");
+                console.log("Divisible por 3");
+                document.write("El número " + numero + " es divisible por 3");
+                break;
+            case divisiblePor5:
+                alert("El número " + numero + " es divisible por 5");
+                console.log("Divisible por 5");
+                document.write("El número " + numero + " es divisible por 5");
+                break;
+            default:
+                alert("El número " + numero + " no es divisible por 3 ni por 5");
+                console.log("No es divisible por 3 ni por 5");
+                document.write("El número " + numero + " no es divisible por 3 ni por 5");
+        }
+    </script>
+</body>
+</html>

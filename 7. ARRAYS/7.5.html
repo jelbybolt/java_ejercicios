@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Pedir 5 Nombres</title>
+</head>
+<body>
+    <h1>5. Array vacío: pide 5 nombres y muéstralos.</h1>
+    <button onclick="pedirNombres()">Pedir Nombres</button>
+    <pre id="resultado">Presiona "Pedir Nombres" para usar la ventana de diálogo (prompt) 5 veces.</pre>
+
+    <script>
+        function pedirNombres() {
+            const resultadoDiv = document.getElementById("resultado");
+            const nombres = [];
+            
+            for (let i = 0; i < 5; i++) {
+                const nombre = window.prompt(`Ingresa el nombre ${i + 1} de 5:`);
+                if (nombre !== null && nombre.trim() !== "") {
+                    nombres.push(nombre.trim());
+                } else {
+                    resultadoDiv.textContent = "Error: Entrada vacía o cancelada. Reinicia el programa.";
+                    return;
+                }
+            }
+            
+            resultadoDiv.textContent = `Nombres almacenados: [${nombres.join(", ")}].`;
+        }
+    </script>
+</body>
+</html>

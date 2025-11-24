@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   // Pedir un número del 1 al 12
+        let entrada = prompt("Introduce un número del 1 al 12:");
+        
+        // Convertir a número entero
+        let numero = parseInt(entrada);
+        
+        // Validar que sea un número válido
+        if (isNaN(numero)) {
+            alert("Valor no válido. Introduce un número.");
+            console.log("Entrada no válida:", entrada);
+            document.write("Valor no válido. Introduce un número.");
+        } else if (numero < 1 || numero > 12) {
+            alert("El número debe estar entre 1 y 12.");
+            console.log("Número fuera de rango:", numero);
+            document.write("El número debe estar entre 1 y 12.");
+        } else {
+            // Determinar el mes
+            let mes;
+            
+            if (numero === 1) {
+                mes = "Enero";
+            } else if (numero === 2) {
+                mes = "Febrero";
+            } else if (numero === 3) {
+                mes = "Marzo";
+            } else if (numero === 4) {
+                               mes = "Abril";
+            } else if (numero === 5) {
+                mes = "Mayo";
+            } else if (numero === 6) {
+                mes = "Junio";
+            } else if (numero === 7) {
+                mes = "Julio";
+            } else if (numero === 8) {
+                mes = "Agosto";
+            } else if (numero === 9) {
+                mes = "Septiembre";
+            } else if (numero === 10) {
+                mes = "Octubre";
+            } else if (numero === 11) {
+                mes = "Noviembre";
+            } else if (numero === 12) {
+                mes = "Diciembre";
+            }
+            
+            alert("El mes " + numero + " es: " + mes);
+            console.log("Mes:", mes);
+            document.write("El mes " + numero + " es: " + mes);
+        }
+
+    </script>
+</body>
+</html>

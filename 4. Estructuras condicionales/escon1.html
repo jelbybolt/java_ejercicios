@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Pedir la calificación al usuario
+        let calificacion = prompt("Introduce tu calificación:");
+        
+        // Convertir a número
+        calificacion = parseFloat(calificacion);
+        
+        // Verificar si aprobó o no
+        if (calificacion >= 60) {
+            alert("¡Felicidades! Has aprobado con " + calificacion);
+            console.log("Aprobado: " + calificacion);
+            document.write("Resultado: ¡Aprobado! Calificación: " + calificacion);
+        } else {
+            alert("Lo siento, no aprobaste. Tu calificación es: " + calificacion);
+            console.log("Reprobado: " + calificacion);
+            document.write("Resultado: Reprobado. Calificación: " + calificacion);
+        }
+
+    </script>
+</body>
+</html>

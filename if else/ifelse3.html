@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   // Pedir un número al usuario
+        let entrada = prompt("Introduce un número:");
+        
+        // Convertir a número entero
+        let numero = parseInt(entrada);
+        
+        // Validar que sea un número válido
+        if (isNaN(numero)) {
+            alert("Valor no válido. Introduce un número.");
+            console.log("Entrada no válida:", entrada);
+            document.write("Valor no válido. Introduce un número.");
+        } else {
+            // Verificar si es par o impar
+            if (numero % 2 === 0) {
+                alert("El número " + numero + " es par.");
+                console.log("Par:", numero);
+                document.write("El número " + numero + " es par.");
+            } else {
+                alert("El número " + numero + " es impar.");
+                console.log("Impar:", numero);
+                document.write("El número " + numero + " es impar.");
+            }
+        }
+    </script>
+</body>
+</html>

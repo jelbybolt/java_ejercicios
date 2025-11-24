@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Recorrer Palabras</title>
+</head>
+<body>
+    <h1>4. Recorrer un array de 5 palabras y mostrar cada palabra.</h1>
+    <p>Palabras en el array:</p>
+    <pre id="resultado"></pre>
+
+    <script>
+        const palabras = ["manzana", "perro", "casa", "verde", "luna"];
+        let output = "";
+
+        for (let i = 0; i < palabras.length; i++) {
+            output += `Palabra ${i + 1}: ${palabras[i]}\n`;
+        }
+        document.getElementById("resultado").textContent = output;
+    </script>
+</body>
+</html>

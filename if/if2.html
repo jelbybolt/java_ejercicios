@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Pedir la edad al usuario
+        let entrada = prompt("Introduce tu edad:");
+
+        // Si el usuario cancela
+        if (entrada === null) {
+            console.log("Entrada cancelada.");
+        } else {
+            // Convertir a número entero
+            let edad = parseInt(entrada, 10);
+
+            // Validar número
+            if (isNaN(edad)) {
+                alert("No se ha introducido una edad válida.");
+                console.log("Edad no válida:", entrada);
+            } else {
+                // Mostrar mensaje solo si es mayor de 18 años
+                if (edad > 18) {
+                    alert("Eres mayor de 18 años.");
+                    console.log("Mayor de 18:", edad);
+                    document.write("Eres mayor de 18 años.");
+                } else {
+                    alert("No eres mayor de 18 años.");
+                    console.log("No es mayor de 18:", edad);
+                    document.write("No eres mayor de 18 años.");
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

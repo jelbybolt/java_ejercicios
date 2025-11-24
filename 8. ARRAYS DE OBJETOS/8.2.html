@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array de 5 Objetos Coche</title>
+</head>
+<body>
+    <h1>2. Array de 5 objetos coche: muestra los modelos.</h1>
+    <p>Modelos de los coches:</p>
+    <pre id="resultado"></pre>
+
+    <script>
+        const coches = [
+            { marca: "Toyota", modelo: "Corolla" },
+            { marca: "Nissan", modelo: "Versa" },
+            { marca: "Honda", modelo: "Civic" },
+            { marca: "Mazda", modelo: "3" },
+            { marca: "Hyundai", modelo: "Elantra" }
+        ];
+
+        let output = "";
+        for (let i = 0; i < coches.length; i++) {
+            output += `Marca: ${coches[i].marca}, Modelo: ${coches[i].modelo}\n`;
+        }
+        document.getElementById("resultado").textContent = output;
+    </script>
+</body>
+</html>

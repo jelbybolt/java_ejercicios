@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                // Pedir la temperatura al usuario
+        let entrada = prompt("Introduce la temperatura en grados:");
+        
+        // Convertir a número
+        let temperatura = Number(entrada);
+        
+        // Validar que sea un número válido
+        if (isNaN(temperatura)) {
+            alert("Valor no válido. Introduce un número.");
+            console.log("Entrada no válida:", entrada);
+            document.write("Valor no válido. Introduce un número.");
+        } else {
+            // Comparar la temperatura
+            if (temperatura < 20) {
+                alert("Hace frío");
+                console.log("Hace frío. Temperatura:", temperatura);
+                document.write("Hace frío. Temperatura: " + temperatura + " grados.");
+            } else if (temperatura > 20) {
+                alert("Hace calor");
+                console.log("Hace calor. Temperatura:", temperatura);
+                document.write("Hace calor. Temperatura: " + temperatura + " grados.");
+            } else {
+                alert("Temperatura agradable (20 grados)");
+                console.log("Temperatura neutral:", temperatura);
+                document.write("Temperatura agradable: " + temperatura + " grados.");
+            }
+        }
+    </script>
+</body>
+</html>

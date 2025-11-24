@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Pedir dos números al usuario
+        let num1 = prompt("Introduce el primer número:");
+        let num2 = prompt("Introduce el segundo número:");
+        
+        // Convertir a números
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+        
+        // Usar operador ternario para determinar cuál es mayor
+        let mayor = num1 > num2 ? num1 : num2;
+        
+        // Mostrar el resultado
+        alert("El número mayor entre " + num1 + " y " + num2 + " es: " + mayor);
+        console.log("El número mayor es: " + mayor);
+        document.write("El número mayor entre " + num1 + " y " + num2 + " es: " + mayor);
+
+    </script>
+</body>
+</html>

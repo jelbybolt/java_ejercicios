@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         // Pedir el año de nacimiento al usuario
+        let entrada = prompt("Introduce tu año de nacimiento:");
+        
+        // Convertir a número entero
+        let anoNacimiento = parseInt(entrada);
+        
+        // Obtener el año actual
+        let anoActual = new Date().getFullYear();
+        
+        // Validar que sea un número válido
+        if (isNaN(anoNacimiento)) {
+            alert("Valor no válido. Introduce un año válido.");
+            console.log("Entrada no válida:", entrada);
+            document.write("Valor no válido. Introduce un año válido.");
+        } else if (anoNacimiento > anoActual) {
+            alert("El año de nacimiento no puede ser mayor al año actual.");
+            console.log("Año inválido:", anoNacimiento);
+            document.write("El año de nacimiento no puede ser mayor al año actual.");
+        } else {
+            // Calcular la edad
+            let edad = anoActual - anoNacimiento;
+            
+            // Usar operador ternario para determinar si puede votar
+            let mensaje = edad >= 18 ? "Sí puedes votar" : "No puedes votar aún";
+            
+            alert("Tienes aproximadamente " + edad + " años - " + mensaje);
+            console.log(mensaje + ": " + edad + " años");
+            document.write("Tienes aproximadamente " + edad + " años - " + mensaje);
+        }       
+    </script>
+</body>
+</html>

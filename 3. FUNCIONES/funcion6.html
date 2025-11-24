@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular el Promedio</title>
+</head>
+<body>
+    <script>
+        // Función que recibe un array de números y devuelve el promedio
+        function calcularPromedio(numeros) {
+            let suma = 0;
+            
+            // Sumar todos los números del array
+            for (let i = 0; i < numeros.length; i++) {
+                suma += numeros[i];
+            }
+            
+            // Calcular el promedio
+            let promedio = suma / numeros.length;
+            return promedio;
+        }
+        
+        // Crear arrays de números
+        let array1 = [10, 20, 30, 40, 50];
+        let array2 = [5, 15, 25];
+        let array3 = [100, 200, 150, 175];
+        
+        // Llamar la función con diferentes arrays
+        let resultado1 = calcularPromedio(array1);
+        let resultado2 = calcularPromedio(array2);
+        let resultado3 = calcularPromedio(array3);
+        
+        // Mostrar los resultados en la consola
+        console.log("Promedio de [10, 20, 30, 40, 50]: " + resultado1);
+        console.log("Promedio de [5, 15, 25]: " + resultado2);
+        console.log("Promedio de [100, 200, 150, 175]: " + resultado3);
+        
+        // Mostrar los resultados en la página
+        document.write("Promedio de [10, 20, 30, 40, 50]: " + resultado1.toFixed(2) + "<br>");
+        document.write("Promedio de [5, 15, 25]: " + resultado2.toFixed(2) + "<br>");
+        document.write("Promedio de [100, 200, 150, 175]: " + resultado3.toFixed(2));
+        </script>
+</body>
+</html>

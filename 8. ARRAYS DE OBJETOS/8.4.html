@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Objetos Alumno Aprobado</title>
+</head>
+<body>
+    <h1>4. Array de alumnos: muestra los nombres de los alumnos que han aprobado (nota >= 60).</h1>
+    <p>Alumnos Aprobados:</p>
+    <pre id="resultado"></pre>
+
+    <script>
+        const alumnos = [
+            { nombre: "Juan", nota: 75 },
+            { nombre: "Laura", nota: 58 },
+            { nombre: "Pablo", nota: 92 },
+            { nombre: "Marta", nota: 60 }
+        ];
+
+        let output = "Alumnos y Notas:\n";
+        for (let i = 0; i < alumnos.length; i++) {
+            output += `- ${alumnos[i].nombre}: ${alumnos[i].nota}\n`;
+        }
+        output += "\nNombres de alumnos aprobados (Nota >= 60):\n";
+
+        for (let i = 0; i < alumnos.length; i++) {
+            if (alumnos[i].nota >= 60) {
+                output += `* ${alumnos[i].nombre}\n`;
+            }
+        }
+        document.getElementById("resultado").textContent = output;
+    </script>
+</body>
+</html>

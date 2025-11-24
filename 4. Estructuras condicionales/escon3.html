@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Pedir un número del 1 al 7
+        let numero = prompt("Introduce un número del 1 al 7:");
+        
+        // Convertir a número
+        numero = parseInt(numero);
+        
+        // Usar switch para determinar el día de la semana
+        switch(numero) {
+            case 1:
+                alert("Lunes");
+                console.log("Lunes");
+                document.write("El día 1 corresponde a: Lunes");
+                break;
+            case 2:
+                alert("Martes");
+                console.log("Martes");
+                document.write("El día 2 corresponde a: Martes");
+                break;
+            case 3:
+                alert("Miércoles");
+                console.log("Miércoles");
+                document.write("El día 3 corresponde a: Miércoles");
+                break;
+            case 4:
+                alert("Jueves");
+                console.log("Jueves");
+                document.write("El día 4 corresponde a: Jueves");
+                break;
+            case 5:
+                alert("Viernes");
+                console.log("Viernes");
+                document.write("El día 5 corresponde a: Viernes");
+                break;
+                 case 6:
+                alert("Sábado");
+                console.log("Sábado");
+                document.write("El día 6 corresponde a: Sábado");
+                break;
+            case 7:
+                alert("Domingo");
+                console.log("Domingo");
+                document.write("El día 7 corresponde a: Domingo");
+                break;
+            default:
+                alert("Número inválido. Introduce un número del 1 al 7.");
+                console.log("Número inválido");
+                document.write("Número inválido. Introduce un número del 1 al 7.");
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>False or true</title>
+</head>
+<body>
+    <script>
+        // Función que recibe un número y devuelve true si es par, false si es impar
+        function esPar(numero) {
+            return numero % 2 === 0;
+        }
+        
+        // Llamar la función con diferentes números
+        let resultado1 = esPar(6);
+        let resultado2 = esPar(10);
+
+        
+        // Mostrar los resultados en la consola
+        console.log("¿6 es par? " + resultado1);
+        console.log("¿10 es par? " + resultado2);
+        
+        // Mostrar los resultados en la página
+        document.write("¿6 es par? " + resultado1 + "<br>");
+        document.write("¿10 es par? " + resultado2 + "<br>");
+
+    </script>
+</body>
+</html>

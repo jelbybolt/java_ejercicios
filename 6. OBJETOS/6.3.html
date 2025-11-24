@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Rectángulo</title>
+</head>
+<body>
+    <h1>3. Objeto rectángulo con método para calcular el área.</h1>
+    <p id="resultado"></p>
+
+    <script>
+        const rectangulo = {
+            ancho: 10,
+            alto: 5,
+            calcularArea: function() {
+                return this.ancho * this.alto;
+            }
+        };
+
+        const area = rectangulo.calcularArea();
+        document.getElementById("resultado").textContent = `Rectángulo de ancho ${rectangulo.ancho} y alto ${rectangulo.alto}. El área es: ${area}.`;
+    </script>
+</body>
+</html>

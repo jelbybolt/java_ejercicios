@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Primer y Último</title>
+</head>
+<body>
+    <h1>1. Array con 5 números: muestra el primer y último elemento.</h1>
+    <p>El array ha sido creado. **Revisa la Consola del Navegador con F12** para ver el resultado.</p>
+    <pre id="array-content"></pre>
+
+    <script>
+        const numeros = [10, 20, 30, 40, 50];
+        const primero = numeros[0];
+        const ultimo = numeros[numeros.length - 1];
+        
+        document.getElementById("array-content").textContent = "Array: [" + numeros.join(", ") + "]";
+
+        console.log("--- ARRAY 1 ---");
+        console.log("Primer elemento:", primero);
+        console.log("Último elemento:", ultimo);
+    </script>
+</body>
+</html>

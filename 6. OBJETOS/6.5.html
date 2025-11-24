@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Usuario</title>
+</head>
+<body>
+    <h1>5. Objeto usuario y método para verificar contraseña.</h1>
+    <p id="resultado"></p>
+
+    <script>
+        const usuario = {
+            nombre: "cliente_1",
+            contraseña: "123456",
+            verificarContraseña: function() {
+                return this.contraseña === "123456";
+            }
+        };
+
+        const resultado = usuario.verificarContraseña();
+        document.getElementById("resultado").textContent = `El usuario es ${usuario.nombre}. La contraseña es "123456". Resultado de la verificación: ${resultado ? "Correcta" : "Incorrecta"}.`;
+    </script>
+</body>
+</html>

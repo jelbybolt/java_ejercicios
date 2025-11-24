@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                // Pedir el color del semáforo al usuario
+        let entrada = prompt("Introduce el color del semáforo (verde, amarillo o rojo):");
+        
+        // Convertir a minúscula para evitar problemas
+        let color = entrada.toLowerCase();
+        
+        // Validar que sea un color válido
+        if (color === null) {
+            console.log("Operación cancelada.");
+        } else if (color === "verde") {
+            alert("¡Puedes pasar! Luz verde");
+            console.log("Verde: Puedes pasar");
+            document.write("¡Puedes pasar! Luz verde");
+        } else if (color === "amarillo") {
+            alert("¡Precaución! Luz amarilla");
+            console.log("Amarillo: Precaución");
+            document.write("¡Precaución! Luz amarilla");
+        } else if (color === "rojo") {
+            alert("¡Detente! Luz roja");
+            console.log("Rojo: Detente");
+            document.write("¡Detente! Luz roja");
+        } else {
+            alert("Color no válido. Introduce: verde, amarillo o rojo.");
+            console.log("Color no válido:", color);
+            document.write("Color no válido. Introduce: verde, amarillo o rojo.");
+        }
+    </script>
+</body>
+</html>

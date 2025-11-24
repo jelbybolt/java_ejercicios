@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let entrada = prompt("Introduce una calificación (0-100):");
+        if (entrada !== null) {
+            let calificacion = parseFloat(entrada);
+            if (!isNaN(calificacion)) {
+                if (calificacion > 50) {
+                    alert("Aprobado");
+                    console.log("Aprobado:", calificacion);
+                    document.write("Aprobado");
+                } else {
+                    alert("No aprobado");
+                    console.log("No aprobado:", calificacion);
+                    document.write("No aprobado");
+                }
+            } else {
+                alert("Valor no válido");
+                console.log("Entrada no numérica:", entrada);
+            }
+        } else {
+            console.log("Operación cancelada.");
+        }
+    </script>
+</body>
+</html>

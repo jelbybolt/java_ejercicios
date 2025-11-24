@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Números Pares</title>
+</head>
+<body>
+    <h1>4. Mostrar los primeros 10 números pares usando un ciclo while.</h1>
+    <p>Resultado:</p>
+    <pre id="resultado"></pre>
+
+    <script>
+        let output = "";
+        let contador = 0;
+        let numero = 2;
+        
+        while (contador < 10) {
+            output += numero + " ";
+            numero += 2;
+            contador++;
+        }
+        document.getElementById("resultado").textContent = output;
+    </script>
+</body>
+</html>

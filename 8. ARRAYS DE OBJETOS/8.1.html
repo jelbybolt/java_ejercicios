@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array de 3 Objetos Persona</title>
+</head>
+<body>
+    <h1>1. Array de 3 objetos persona: muestra el nombre de cada persona.</h1>
+    <p>Nombres de las personas:</p>
+    <pre id="resultado"></pre>
+
+    <script>
+        const personas = [
+            { nombre: "Elena", edad: 24 },
+            { nombre: "Marcos", edad: 35 },
+            { nombre: "Sofía", edad: 19 }
+        ];
+
+        let output = "";
+        for (let i = 0; i < personas.length; i++) {
+            output += `Nombre: ${personas[i].nombre}\n`;
+        }
+        document.getElementById("resultado").textContent = output;
+    </script>
+</body>
+</html>

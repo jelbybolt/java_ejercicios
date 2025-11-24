@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let entrada = prompt("Introduce un número:");
+        if (entrada === null) {
+            alert("Operación cancelada.");
+            console.log("Entrada cancelada.");
+        } else {
+            let numero = parseFloat(entrada);
+            if (isNaN(numero)) {
+                alert("No es un número válido.");
+                console.log("Entrada no numérica:", entrada);
+            } else if (numero > 10) {
+                alert(numero + " es mayor que 10.");
+                console.log(numero + " > 10");
+                document.write(numero + " es mayor que 10.");
+            } else {
+                alert(numero + " no es mayor que 10.");
+                console.log(numero + " <= 10");
+                document.write(numero + " no es mayor que 10.");
+            }
+        }
+    </script>
+</body>
+</html>

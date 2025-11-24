@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+           // Pedir un número del 1 al 7
+        let entrada = prompt("Introduce un número del 1 al 7:");
+        
+        // Convertir a número entero
+        let numero = parseInt(entrada);
+        
+        // Validar que sea un número válido
+        if (isNaN(numero)) {
+            alert("Valor no válido. Introduce un número.");
+            console.log("Entrada no válida:", entrada);
+            document.write("Valor no válido. Introduce un número.");
+        } else if (numero < 1 || numero > 7) {
+            alert("El número debe estar entre 1 y 7.");
+            console.log("Número fuera de rango:", numero);
+            document.write("El número debe estar entre 1 y 7.");
+        } else {
+            // Determinar el día de la semana
+            let dia;
+
+                   if (numero === 1) {
+                dia = "Lunes";
+            } else if (numero === 2) {
+                dia = "Martes";
+            } else if (numero === 3) {
+                dia = "Miércoles";
+            } else if (numero === 4) {
+                dia = "Jueves";
+            } else if (numero === 5) {
+                dia = "Viernes";
+            } else if (numero === 6) {
+                dia = "Sábado";
+            } else if (numero === 7) {
+                dia = "Domingo";
+            }
+            
+            alert("El día " + numero + " es: " + dia);
+            console.log("Día:", dia);
+            document.write("El día " + numero + " es: " + dia);
+        }
+    </script>
+</body>
+</html>

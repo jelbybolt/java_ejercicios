@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Objetos Libro Títulos</title>
+</head>
+<body>
+    <h1>5. Array de libros: muestra los títulos de todos los libros.</h1>
+    <p>Títulos de Libros:</p>
+    <pre id="resultado"></pre>
+
+    <script>
+        const libros = [
+            { titulo: "Cien años de soledad", autor: "García Márquez" },
+            { titulo: "1984", autor: "George Orwell" },
+            { titulo: "Don Quijote de la Mancha", autor: "Cervantes" }
+        ];
+
+        let output = "";
+        for (let i = 0; i < libros.length; i++) {
+            output += `Título: ${libros[i].titulo} (Autor: ${libros[i].autor})\n`;
+        }
+        document.getElementById("resultado").textContent = output;
+    </script>
+</body>
+</html>

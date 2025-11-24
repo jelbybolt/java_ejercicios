@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Pedir la edad al usuario
+        let entrada = prompt("Introduce tu edad:");
+        
+        // Convertir a número entero
+        let edad = parseInt(entrada);
+        
+        // Validar que sea un número válido
+        if (isNaN(edad)) {
+            alert("Valor no válido. Introduce un número.");
+            console.log("Entrada no válida:", entrada);
+            document.write("Valor no válido. Introduce un número.");
+        } else {
+            // Comparar la edad con 18 años
+            if (edad >= 18) {
+                alert("Eres mayor de edad. Tienes " + edad + " años.");
+                console.log("Mayor de edad:", edad);
+                document.write("Eres mayor de edad. Tienes " + edad + " años.");
+            } else {
+                alert("Eres menor de edad. Tienes " + edad + " años.");
+                console.log("Menor de edad:", edad);
+                document.write("Eres menor de edad. Tienes " + edad + " años.");
+            }
+        }
+
+    </script>
+</body>
+</html>

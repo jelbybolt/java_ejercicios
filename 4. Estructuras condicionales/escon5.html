@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Pedir la edad al usuario
+        let edad = prompt("Introduce tu edad:");
+        
+        // Convertir a número
+        edad = parseInt(edad);
+        
+        // Verificar si es mayor de edad (18 años o más)
+        if (edad >= 18) {
+            alert("¡Eres mayor de edad! Tienes " + edad + " años.");
+            console.log("Mayor de edad: " + edad + " años");
+            document.write("Resultado: ¡Eres mayor de edad! Tienes " + edad + " años.");
+        } else {
+            alert("Eres menor de edad. Tienes " + edad + " años.");
+            console.log("Menor de edad: " + edad + " años");
+            document.write("Resultado: Eres menor de edad. Tienes " + edad + " años.");
+        }
+    </script>
+</body>
+</html>

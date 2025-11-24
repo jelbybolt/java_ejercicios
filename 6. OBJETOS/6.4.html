@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Libro</title>
+</head>
+<body>
+    <h1>4. Objeto libro con propiedades y un método de descripción.</h1>
+    <p>El objeto ha sido creado y su método se ejecutó. **Revisa la Consola del Navegador con F12 para ver la descripción del libro.**</p>
+
+    <script>
+        const libro = {
+            titulo: "El Señor de los Anillos",
+            autor: "J.R.R. Tolkien",
+            año: 1954,
+            mostrarDescripcion: function() {
+                console.log("--- OBJETO LIBRO ---");
+                console.log(`"${this.titulo}", escrito por ${this.autor} en ${this.año}.`);
+            }
+        };
+
+        libro.mostrarDescripcion();
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Objetos Película Descripción</title>
+</head>
+<body>
+    <h1>6. Array de películas: muestra una breve descripción de cada película.</h1>
+    <p>Descripciones de Películas:</p>
+    <pre id="resultado"></pre>
+
+    <script>
+        const peliculas = [
+            { titulo: "Parásitos", director: "Bong Joon-ho", año: 2019 },
+            { titulo: "Pulp Fiction", director: "Quentin Tarantino", año: 1994 },
+            { titulo: "Origen", director: "Christopher Nolan", año: 2010 }
+        ];
+
+        let output = "";
+        for (let i = 0; i < peliculas.length; i++) {
+            output += `Título: ${peliculas[i].titulo}\n`;
+            output += `Descripción: Dirigida por ${peliculas[i].director} en el año ${peliculas[i].año}.\n\n`;
+        }
+        document.getElementById("resultado").textContent = output;
+    </script>
+</body>
+</html>

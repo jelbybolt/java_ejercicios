@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                // Pedir una letra al usuario
+        let entrada = prompt("Introduce una letra (A, B o C):");
+        
+        // Convertir a mayúscula para evitar problemas
+        let letra = entrada.toUpperCase();
+        
+        // Validar que sea una letra válida
+        if (letra === null) {
+            console.log("Operación cancelada.");
+        } else if (letra.length !== 1) {
+            alert("Debes introducir una sola letra.");
+            console.log("Entrada no válida: " + entrada);
+            document.write("Debes introducir una sola letra.");
+        } else if (letra === "A") {
+            alert("Excelente");
+            console.log("Excelente");
+            document.write("Excelente");
+        } else if (letra === "B") {
+            alert("Bien");
+            console.log("Bien");
+            document.write("Bien");
+        } else if (letra === "C") {
+            alert("Regular");
+            console.log("Regular");
+            document.write("Regular");
+        } else {
+            alert("La letra debe ser A, B o C.");
+            console.log("Letra no válida: " + letra);
+            document.write("La letra debe ser A, B o C.");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          // Pedir la temperatura al usuario
+        let entrada = prompt("Introduce la temperatura en grados:");
+        
+        // Convertir a número decimal
+        let temperatura = parseFloat(entrada);
+        
+        // Validar que sea un número válido
+        if (isNaN(temperatura)) {
+            alert("Valor no válido. Introduce un número.");
+            console.log("Entrada no válida:", entrada);
+            document.write("Valor no válido. Introduce un número.");
+        } else {
+            // Usar operador ternario para determinar si es calor o frío
+            let mensaje = temperatura >= 20 ? "Calor" : "Frío";
+            
+            alert("Temperatura: " + temperatura + " grados - " + mensaje);
+            console.log(mensaje + ": " + temperatura + " grados");
+            document.write("Temperatura: " + temperatura + " grados - " + mensaje);
+        }      
+    </script>
+</body>
+</html>

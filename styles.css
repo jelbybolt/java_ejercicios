@@ -1,0 +1,665 @@
+/* Variables CSS - Tema Japonés */
+:root {
+    --primary: #2e5cb8;
+    --secondary: #e87a90;
+    --accent: #ff6b6b;
+    --dark: #1a1f2e;
+    --darker: #0d1117;
+    --light: #f0f8ff;
+    --sakura-pink: #ffb7c5;
+    --pixel-size: 3px;
+    --japan-red: #bc002d;
+}
+
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MS Gothic', 'Yu Gothic', 'Hiragino Sans', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+    color: var(--light);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Fondo Japonés */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="%231a1f2e"/><path d="M100,50 Q150,100 100,150 Q50,100 100,50" fill="%232e5cb8" opacity="0.1"/></svg>'),
+        linear-gradient(45deg, rgba(46, 92, 184, 0.1) 0%, rgba(232, 122, 144, 0.1) 100%);
+    background-size: 400px 400px, cover;
+    z-index: -1;
+}
+
+/* Bordes Pixelados */
+.pixel-border {
+    border: var(--pixel-size) solid var(--primary);
+    position: relative;
+    background: rgba(30, 35, 50, 0.9);
+    box-shadow: 
+        0 0 0 var(--pixel-size) var(--secondary),
+        inset 0 0 20px rgba(46, 92, 184, 0.3);
+}
+
+.pixel-border::before {
+    content: '';
+    position: absolute;
+    top: calc(-2 * var(--pixel-size));
+    left: calc(-2 * var(--pixel-size));
+    right: calc(-2 * var(--pixel-size));
+    bottom: calc(-2 * var(--pixel-size));
+    border: var(--pixel-size) solid var(--secondary);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Header Japonés */
+.japanese-header {
+    background: linear-gradient(135deg, var(--dark) 0%, #2a2f40 100%);
+    padding: 3rem 0 4rem 0;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 4px solid var(--japan-red);
+}
+
+.japanese-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="%23bc002d" opacity="0.1"/></svg>');
+    background-size: 200px 200px;
+    opacity: 0.3;
+}
+
+.header-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-message h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, var(--light), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(232, 122, 144, 0.5);
+    font-weight: bold;
+}
+
+.welcome-message p {
+    font-size: 1.3rem;
+    color: var(--sakura-pink);
+    text-shadow: 0 0 10px rgba(255, 183, 197, 0.7);
+}
+
+/* Decoraciones Japonesas */
+.japanese-decoration {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+}
+
+.sakura-branch {
+    width: 100px;
+    height: 80px;
+    background-image: 
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M30,50 Q50,30 70,50 Q50,70 30,50" fill="%23ffb7c5"/><path d="M50,30 Q70,50 50,70 Q30,50 50,30" fill="%23ffb7c5"/></svg>');
+    background-repeat: no-repeat;
+    opacity: 0.7;
+}
+
+.lantern {
+    width: 40px;
+    height: 60px;
+    background: var(--japan-red);
+    position: relative;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.lantern::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 10px;
+    width: 20px;
+    height: 10px;
+    background: var(--japan-red);
+    border-radius: 5px 5px 0 0;
+}
+
+/* Pétalos de Sakura */
+.sakura-petal {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    background: var(--sakura-pink);
+    border-radius: 50% 0 50% 50%;
+    transform: rotate(45deg);
+    animation: fall linear forwards;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Contenido Principal */
+.main-content {
+    padding: 2rem 0;
+}
+
+.container-fluid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Títulos de Sección */
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    color: var(--light);
+    text-shadow: 0 0 10px var(--primary);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+}
+
+.section-title i {
+    margin-right: 1rem;
+    color: var(--secondary);
+}
+
+/* Grid de Ejercicios */
+.exercises-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.exercise-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Categorías de Ejercicios */
+.exercise-category {
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.exercise-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(46, 92, 184, 0.4);
+}
+
+.exercise-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(232, 122, 144, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.exercise-category:hover::before {
+    left: 100%;
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--secondary);
+}
+
+.category-icon {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(46, 92, 184, 0.3);
+    border: 2px solid var(--primary);
+}
+
+.category-header h3 {
+    flex: 1;
+    color: var(--light);
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.exercise-count {
+    background: var(--secondary);
+    color: var(--dark);
+    padding: 0.3rem 0.8rem;
+    border-radius: 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Enlaces de Ejercicios */
+.exercise-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.exercise-links a {
+    display: block;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--light);
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.exercise-links a:hover {
+    background: rgba(46, 92, 184, 0.3);
+    border-left-color: var(--secondary);
+    transform: translateX(5px);
+    color: var(--sakura-pink);
+}
+
+.exercise-links a::before {
+    content: '▶';
+    position: absolute;
+    right: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.exercise-links a:hover::before {
+    opacity: 1;
+}
+
+/* Sección del Visor */
+.viewer-section {
+    margin: 3rem 0;
+}
+
+.viewer-container {
+    padding: 1.5rem;
+}
+
+.viewer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--secondary);
+}
+
+.viewer-title {
+    color: var(--secondary);
+    font-size: 1.5rem;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(232, 122, 144, 0.5);
+}
+
+.viewer-title i {
+    margin-right: 0.5rem;
+}
+
+.viewer-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-control {
+    background: var(--primary);
+    border: 2px solid var(--secondary);
+    color: var(--light);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.btn-control:hover {
+    background: var(--secondary);
+    border-color: var(--primary);
+    transform: scale(1.1);
+}
+
+/* Iframe Wrapper */
+.iframe-wrapper {
+    height: 500px;
+    overflow: hidden;
+    background: white;
+    border: 2px solid var(--primary);
+    position: relative;
+}
+
+.iframe-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid var(--secondary);
+    pointer-events: none;
+    z-index: 1;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Documentación */
+.documentation-section {
+    margin-top: 4rem;
+}
+
+.docs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.doc-card {
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.doc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(232, 122, 144, 0.3);
+}
+
+.doc-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.doc-card h3 {
+    color: var(--secondary);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(232, 122, 144, 0.5);
+}
+
+.doc-card p {
+    color: var(--light);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.doc-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.doc-card li {
+    padding: 0.5rem 0;
+    color: var(--light);
+    position: relative;
+    padding-left: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.doc-card li:last-child {
+    border-bottom: none;
+}
+
+.doc-card li::before {
+    content: '🌸';
+    position: absolute;
+    left: 0;
+    color: var(--sakura-pink);
+}
+
+.doc-card code {
+    background: rgba(46, 92, 184, 0.3);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0;
+    color: var(--sakura-pink);
+    font-family: 'MS Gothic', monospace;
+    border: 1px solid var(--primary);
+}
+
+/* Footer Japonés */
+.japanese-footer {
+    background: linear-gradient(135deg, var(--dark) 0%, #1e2332 100%);
+    padding: 2rem 0;
+    border-top: 4px solid var(--japan-red);
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--secondary);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.kanji {
+    font-size: 2.5rem;
+    color: var(--japan-red);
+    text-shadow: 0 0 10px rgba(188, 0, 45, 0.5);
+}
+
+.footer-info {
+    text-align: center;
+    flex: 1;
+}
+
+.footer-info p {
+    margin-bottom: 1rem;
+    color: var(--light);
+}
+
+.footer-info strong {
+    color: var(--sakura-pink);
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: var(--light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--secondary);
+}
+
+.footer-links i {
+    margin-right: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .exercise-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .docs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 0 1rem;
+    }
+    
+    .welcome-message h1 {
+        font-size: 2rem;
+    }
+    
+    .exercise-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .docs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-links {
+        flex-wrap: wrap;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .category-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .japanese-decoration {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-message h1 {
+        font-size: 1.5rem;
+    }
+    
+    .welcome-message p {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .exercise-category, .doc-card {
+        padding: 1rem;
+    }
+    
+    .iframe-wrapper {
+        height: 400px;
+    }
+}
+
+/* Animaciones de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.exercise-category, .doc-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Retrasos escalonados para las animaciones */
+.exercise-row:nth-child(1) .exercise-category { animation-delay: 0.1s; }
+.exercise-row:nth-child(1) .exercise-category:nth-child(2) { animation-delay: 0.2s; }
+.exercise-row:nth-child(1) .exercise-category:nth-child(3) { animation-delay: 0.3s; }
+
+.exercise-row:nth-child(2) .exercise-category { animation-delay: 0.4s; }
+.exercise-row:nth-child(2) .exercise-category:nth-child(2) { animation-delay: 0.5s; }
+.exercise-row:nth-child(2) .exercise-category:nth-child(3) { animation-delay: 0.6s; }
+
+.exercise-row:nth-child(3) .exercise-category { animation-delay: 0.7s; }
+.exercise-row:nth-child(3) .exercise-category:nth-child(2) { animation-delay: 0.8s; }
+.exercise-row:nth-child(3) .exercise-category:nth-child(3) { animation-delay: 0.9s; }
+
+.exercise-row:nth-child(4) .exercise-category { animation-delay: 1.0s; }
+.exercise-row:nth-child(4) .exercise-category:nth-child(2) { animation-delay: 1.1s; }
+.exercise-row:nth-child(4) .exercise-category:nth-child(3) { animation-delay: 1.2s; }
+
+.doc-card:nth-child(1) { animation-delay: 0.1s; }
+.doc-card:nth-child(2) { animation-delay: 0.2s; }
+.doc-card:nth-child(3) { animation-delay: 0.3s; }
+.doc-card:nth-child(4) { animation-delay: 0.4s; }
+.doc-card:nth-child(5) { animation-delay: 0.5s; }
+.doc-card:nth-child(6) { animation-delay: 0.6s; }
+.doc-card:nth-child(7) { animation-delay: 0.7s; }
+.doc-card:nth-child(8) { animation-delay: 0.8s; }
+.doc-card:nth-child(9) { animation-delay: 0.9s; }
+.doc-card:nth-child(10) { animation-delay: 1.0s; }
+.doc-card:nth-child(11) { animation-delay: 1.1s; }
+.doc-card:nth-child(12) { animation-delay: 1.2s; }

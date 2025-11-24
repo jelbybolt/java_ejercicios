@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar Letra A</title>
+</head>
+<body>
+    <h1>6. Contar cuántas veces aparece la letra 'a' en una palabra.</h1>
+    <label for="palabra">Introduce una palabra:</label>
+    <input type="text" id="palabra">
+    <button onclick="contarLetraA()">Contar 'a'</button>
+    <p id="resultado"></p>
+
+    <script>
+        function contarLetraA() {
+            const palabra = document.getElementById("palabra").value.toLowerCase();
+            let contador = 0;
+            
+            if (palabra.trim() === "") {
+                document.getElementById("resultado").textContent = "Por favor, introduce una palabra.";
+                return;
+            }
+
+            for (let i = 0; i < palabra.length; i++) {
+                if (palabra[i] === 'a') {
+                    contador++;
+                }
+            }
+            document.getElementById("resultado").textContent = `La letra 'a' aparece ${contador} veces.`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Gato</title>
+</head>
+<body>
+    <h1>6. Objeto gato con propiedades y un método que devuelve un mensaje.</h1>
+    <p>El mensaje devuelto se muestra a continuación en la consola. **Presiona F12**.</p>
+    <p id="resultado"></p>
+
+    <script>
+        const gato = {
+            nombre: "Misi",
+            edad: 3,
+            obtenerMensaje: function() {
+                return `${this.nombre} tiene ${this.edad} años.`;
+            }
+        };
+
+        const mensaje = gato.obtenerMensaje();
+        console.log("--- OBJETO GATO ---");
+        console.log("Mensaje:", mensaje);
+        document.getElementById("resultado").textContent = mensaje;
+    </script>
+</body>
+</html>

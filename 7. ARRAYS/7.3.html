@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Suma 5 Números</title>
+</head>
+<body>
+    <h1>3. Pedir 5 números, almacenarlos y mostrar la suma.</h1>
+    <button onclick="sumarNumeros()">Iniciar Suma</button>
+    <pre id="resultado">Presiona "Iniciar Suma" para usar la ventana de diálogo (prompt) 5 veces.</pre>
+
+    <script>
+        function sumarNumeros() {
+            const resultadoDiv = document.getElementById("resultado");
+            const numeros = [];
+            let suma = 0;
+            
+            for (let i = 0; i < 5; i++) {
+                const input = window.prompt(`Ingresa el número ${i + 1} de 5:`);
+                const num = parseInt(input);
+
+                if (!isNaN(num)) {
+                    numeros.push(num);
+                    suma += num;
+                } else {
+                    resultadoDiv.textContent = "Error: Entrada inválida. Reinicia el programa.";
+                    return;
+                }
+            }
+            
+            resultadoDiv.textContent = `Números ingresados: [${numeros.join(", ")}].\nLa suma total es: ${suma}.`;
+        }
+    </script>
+</body>
+</html>

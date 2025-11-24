@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Pedir el primer número
+        let entrada1 = prompt("Introduce el primer número:");
+        
+        // Pedir el segundo número
+        let entrada2 = prompt("Introduce el segundo número:");
+        
+        // Convertir a números
+        let num1 = Number(entrada1);
+        let num2 = Number(entrada2);
+        
+        // Validar que ambos sean números válidos
+        if (isNaN(num1) || isNaN(num2)) {
+            alert("Uno o ambos valores no son números válidos.");
+            console.log("Entrada no válida");
+            document.write("Uno o ambos valores no son números válidos.");
+        } else {
+            // Comparar los números
+            if (num1 > num2) {
+                alert("El número mayor es: " + num1);
+                console.log("Mayor:", num1);
+                document.write("El número mayor es: " + num1);
+            } else if (num2 > num1) {
+                alert("El número mayor es: " + num2);
+                console.log("Mayor:", num2);
+                document.write("El número mayor es: " + num2);
+            } else {
+                alert("Los dos números son iguales: " + num1);
+                console.log("Iguales:", num1);
+                document.write("Los dos números son iguales: " + num1);
+            }
+        }
+    </script>
+</body>
+</html>

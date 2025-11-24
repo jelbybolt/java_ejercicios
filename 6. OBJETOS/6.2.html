@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Coche con Método</title>
+</head>
+<body>
+    <h1>2. Objeto coche con propiedades y un método de descripción.</h1>
+    <p>El objeto ha sido creado y su método se ejecutó. **Revisa la Consola del Navegador  con F12** para ver la descripción.</p>
+
+    <script>
+        const coche = {
+            marca: "Ford",
+            modelo: "Mustang",
+            año: 1969,
+            mostrarDescripcion: function() {
+                console.log("--- OBJETO COCHE ---");
+                console.log(`Coche: ${this.marca} ${this.modelo}, del año ${this.año}.`);
+            }
+        };
+
+        coche.mostrarDescripcion();
+    </script>
+</body>
+</html>

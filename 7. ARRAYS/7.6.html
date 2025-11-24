@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Contar Mayores a 50</title>
+</head>
+<body>
+    <h1>6. Pedir 10 números y contar cuántos son mayores a 50.</h1>
+    <button onclick="contarMayores50()">Contar Números</button>
+    <pre id="resultado">Presiona "Contar Números" para usar la ventana de diálogo (prompt) 10 veces.</pre>
+
+    <script>
+        function contarMayores50() {
+            const resultadoDiv = document.getElementById("resultado");
+            let contador = 0;
+            const numeros = [];
+            
+            for (let i = 0; i < 10; i++) {
+                const input = window.prompt(`Ingresa el número ${i + 1} de 10:`);
+                const num = parseInt(input);
+
+                if (!isNaN(num)) {
+                    numeros.push(num);
+                    if (num > 50) {
+                        contador++;
+                    }
+                } else {
+                    resultadoDiv.textContent = "Error: Entrada inválida. Reinicia el programa.";
+                    return;
+                }
+            }
+            
+            resultadoDiv.textContent = `Números ingresados: [${numeros.join(", ")}].\nTotal mayores a 50: ${contador}.`;
+        }
+    </script>
+</body>
+</html>
